@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Lightweight tool to get an Airtable view as flattened JSON, and then unflatten it.",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

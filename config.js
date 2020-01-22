@@ -8,7 +8,8 @@ const statusesToPublish = [ 'Publish' ];
 const keyField = 'key';
 const valField = 'theCopy';
 
-const outputPath = path.join(process.cwd(), 'l10n', 'en-us.json')
+const outputDirName = 'l10n'
+const outputFileName = 'en-us.json'
 
 module.exports.config = {
     apiKey: env.AIRTABLE_API_KEY
@@ -17,7 +18,8 @@ module.exports.config = {
   , primaryKeyField: keyField
   , theCopyField: valField
   , filter: generateStatusFilter(statusField, statusesToPublish)
-  , output: outputPath
+  , outputDirName: outputDirName
+  , outputFileName: outputFileName
 };
 
 function generateStatusFilter(field, values) {

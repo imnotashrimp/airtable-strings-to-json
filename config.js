@@ -4,13 +4,15 @@ const env = process.env;
 
 const statusField = 'appStatus';
 const statusesToPublish = [ 'Publish' ];
+const keyField = 'key';
+const valField = 'theCopy';
 
 module.exports.config = {
     apiKey: env.AIRTABLE_API_KEY
   , baseId: env.AIRTABLE_BASE_ID
   , tableName: env.AIRTABLE_TABLE_NAME
-  , primaryKeyField: 'key'
-  , theCopyField: 'theCopy'
+  , primaryKeyField: keyField
+  , theCopyField: valField
   , filter: generateStatusFilter(statusField, statusesToPublish)
 };
 
